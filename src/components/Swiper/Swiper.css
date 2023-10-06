@@ -1,0 +1,59 @@
+.swiper-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  touch-action: pan-y;
+  position: relative;
+  background-color: #eaeaea;
+}
+
+.swiper-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease-out;
+}
+
+.swiper-list.is-swiping {
+  transition: none;
+}
+
+/* Arrow indicator */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 3px solid var(--swiper-button-color);
+  border-left: 3px solid var(--swiper-button-color);
+  border-radius: 2px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.swiper-button-prev {
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%) rotate(315deg);
+}
+
+.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.swiper-button-prev.disabled,
+.swiper-button-next.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: not-allowed;
+}
